@@ -119,4 +119,37 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Styles pour les erreurs */
+  .text-destructive {
+    @apply text-destructive;
+  }
+  
+  .border-destructive {
+    @apply border-destructive;
+  }
+
+  /* Styles pour les champs de texte */
+  input {
+    @apply transition-colors;
+  }
+  
+  input:focus {
+    @apply ring-1 ring-ring outline-none;
+  }
+  
+  input.error {
+    @apply border-destructive ring-destructive/50;
+  }
+
+  /* Styles pour les liens */
+  a {
+    @apply text-primary hover:underline transition-colors;
+  }
+
+  /* Styles pour les états disabled */
+  button:disabled,
+  input:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
 }
